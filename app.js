@@ -35,8 +35,20 @@ function shuffle(arr) {
   return arr;
 }
 
+// 1回のプレイで各ジャンルから出す問題数（8ジャンル × 2 = 16問）
+const PER_GENRE = 2;
+
+// 各ジャンルからランダムに PER_GENRE 問ずつ選び、全体をシャッフル
+function pickQuestions() {
+  const picked = GENRES.flatMap((g) => {
+    const ids = QUESTIONS.map((q, i) => (q.genre === g.id ? i : -1)).filter((i) => i >= 0);
+    return shuffle(ids).slice(0, PER_GENRE);
+  });
+  return shuffle(picked);
+}
+
 function start() {
-  order = shuffle(QUESTIONS.map((_, i) => i));
+  order = pickQuestions();
   answers = [];
   pos = 0;
   history.replaceState(null, "", location.pathname);
