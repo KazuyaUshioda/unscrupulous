@@ -1,18 +1,18 @@
 // 回答の選択肢。value が大きいほど「許容できる」
 const RATINGS = [
-  { value: 4, emoji: "😂", label: "普通に笑える" },
+  { value: 4, emoji: "👌", label: "全然アリ" },
   { value: 3, emoji: "🙂", label: "まあアリ" },
-  { value: 2, emoji: "😐", label: "微妙" },
-  { value: 1, emoji: "😬", label: "キツい" },
-  { value: 0, emoji: "🤬", label: "不愉快極まりない" },
+  { value: 2, emoji: "😐", label: "どちらとも言えない" },
+  { value: 1, emoji: "😬", label: "ちょっとナシ" },
+  { value: 0, emoji: "🙅", label: "絶対ナシ" },
 ];
 
 // 総合スコアに応じたタイプ（下限スコア順）
 const TYPES = [
-  { min: 80, name: "不謹慎の申し子", desc: "笑いに聖域なし。言う場所だけは選んでください。" },
+  { min: 80, name: "不謹慎の申し子", desc: "聖域なし。言う場所だけは選んでください。" },
   { min: 60, name: "ブラックユーモアの住人", desc: "毒のあるネタも大体いける。頼れる悪友タイプ。" },
-  { min: 40, name: "バランス型", desc: "笑えるものは笑い、ダメなものはダメ。一番健全かも。" },
-  { min: 20, name: "良識派", desc: "笑いより思いやりが先に立つ。優しい人です。" },
+  { min: 40, name: "バランス型", desc: "アリはアリ、ナシはナシ。一番健全かも。" },
+  { min: 20, name: "良識派", desc: "許容より思いやりが先に立つ。優しい人です。" },
   { min: 0,  name: "聖人", desc: "不謹慎ネタはほぼNG。この世界は少し生きづらいかも。" },
 ];
 
